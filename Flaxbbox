@@ -1,0 +1,138 @@
+<! DOCTYPE html >
+
+< html  lang = " pt-br " >
+< cabeça >
+< meta  charset = " utf-8 " >
+< meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
+< meta  name = " description " content = " Este site se refere ao desenvolvimento de layouts responsivivos ........ no máximo 160 " >
+< meta  name = " autor " content = " Desenvolvido por Dev " >
+< meta  name = " keywords " content = " layout responsivo, CSS, HTML, Front-End, JavaScript, Js " >
+< meta  name = " robôs " content = " indexar, seguir " >
+
+< title > Layout Responsivo </ title >
+< link  href = " css / estilo4.css " rel = " stylesheet " >
+< link  href = " css / flex.css " rel = " stylesheet " >
+
+</ head >
+< corpo >
+	< seção >
+		< header > Topo do site </ header >
+		< principal >
+			< h2 > Flex Box </ h2 >
+			< div  class = " texto " > São caixas flexíveis que podem se adaptar aos breakpoints declarados no CSS - é como se fosse uma tabela.
+			< h3 > Elementos e atributos trabalhados junto com o Flex Box: </ h3 >	
+				< ul >
+					< ol > Display: exibe um elemento </ ol >
+					< ol > Flex-direction: direção dos elementos, por padrão declaramos ele in row (linha) </ ol >
+					< ol > Flex-wrap: define quebra de linha da caixa </ ol >
+					< ol > Flex-flow: atalho para o uso do direction e wrap </ ol >
+					< ol > justify-content: conteúdo justificado </ ol >
+					< ol > itens de alinhamento: alinhamento de itens dentro do elemento </ ol >
+				</ ul >
+
+
+			</ div >
+
+		</ main >
+		< aparte >
+			< h2 > Montanto um Flex-box </ h2 >
+
+				< h3 > exibição: bloco; </ h3 >
+				< section  class = " container " >
+					< div  class = " item " > 1 </ div >
+					< div  class = " item " > 2 </ div >
+					< div  class = " item " > 3 </ div >
+					< div  class = " item " > 4 </ div >
+				</ seção >
+
+				< h3 > display: flex; </ h3 >
+				< section  class = " container flex " >
+					< div  class = " item " > 1 </ div >
+					< div  class = " item " > 2 </ div >
+					< div  class = " item " > 3 </ div >
+					< div  class = " item " > 4 </ div >
+				</ seção >
+		</ aparte >
+		< rodapé > Rodapé </ rodapé >	
+	</ seção >
+</ body >
+</ html > 
+ 77  Aula 13- flexbox - / css / estiloflexsite1.css 
+@@ -0,0 +1,77 @@
+* {
+  dimensionamento da caixa : caixa de borda;
+}
+
+/ * Estilizar o corpo * /
+corpo {
+  família de fontes : Arial;
+  margem :  0 ;
+}
+
+/ * Header / logo Title * /
+. header {
+  preenchimento :  60 px ;
+  alinhamento de texto : centro;
+  plano de fundo :  # 1abc9c ;
+  cor : branco;
+}
+
+/ * Definir o estilo da barra de navegação superior * /
+. navbar {
+  display : flex;
+  cor de fundo :  # 333 ;
+}
+
+/ * Definir o estilo dos links da barra de navegação * /
+. navbar  a {
+  cor : branco;
+  preenchimento :  14 px  20 px ;
+  decoração de texto : nenhum;
+  alinhamento de texto : centro;
+}
+
+/ * Mudar a cor ao passar o mouse * /
+. navbar  a : hover {
+  cor de fundo :  # ddd ;
+  cor : preto;
+}
+
+/ * Container de coluna * /
+. linha {  
+  display : flex;
+  flex-wrap : wrap;
+}
+
+/ * Cria duas colunas desiguais que ficam próximas uma da outra * /
+/ * Barra lateral / coluna esquerda * /
+. lado {
+  flex :  30 % ;
+  cor de fundo :  # f1f1f1 ;
+  preenchimento :  20 px ;
+}
+
+/ * Coluna principal * /
+. main {
+  flex :  70 % ;
+  cor de fundo : branco;
+  preenchimento :  20 px ;
+}
+/ * Imagem falsa, apenas para este exemplo * /
+. fakeimg {
+	cor de fundo :  # aaa ;
+	largura :  100 % ;
+	preenchimento :  20 px ;
+}
+
+/*rodapé*/
+. rodapé {
+  preenchimento :  20 px ;
+  alinhamento de texto : centro;
+  plano de fundo :  # ddd ;
+}
+
+tela @media e ( largura máxima :  700 px ) {
+  . remar , . navbar {   
+    direção flexível : coluna;
+  }
+} 
